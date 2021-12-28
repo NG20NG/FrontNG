@@ -1,0 +1,166 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+/*============================ err =============================*/
+.conecterVousErr {
+  height: 215px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conecterVousErr > div {
+  font-size: 30px;
+  font-family: 500;
+}
+/*============================Header============================*/
+header {
+  width: 100vw;
+  height: 450px;
+  background-image: linear-gradient(to bottom left, #f4af02d2, #ff4a53);
+  background-size: 100vw 500px;
+  color: white;
+  font-size: 20px;
+}
+.PreApp {
+  height: 200px;
+}
+.App {
+  height: auto;
+  background-color: white;
+}
+.secoundApp {
+  height: 2000px;
+}
+main {
+  height: auto;
+}
+.NavCountaner {
+  height: 90px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  font-size: 15px;
+  z-index: 50;
+  width: 100%;
+}
+.LogoChams {
+  height: 80px;
+  width: 80px;
+  margin-left: 100px;
+}
+.actualitesButton {
+  list-style: none;
+  margin-right: auto;
+  margin-left: 50px;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.336);
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: rgb(0, 132, 255);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.185);
+}
+h2 {
+  height: 90px;
+  width: 400px;
+  color: black;
+  font-weight: 400;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+}
+.list-menu-countaner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 650px;
+  height: 40px;
+  margin-right: 100px;
+}
+.lefy-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 30px;
+  font-size: 17px;
+  cursor: pointer;
+  margin-right: 30px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.494);
+  transition: 0.2s;
+}
+.ContactNav {
+  width: 75px;
+}
+.list-menu-countaner > .about {
+  width: 90px;
+}
+.lefy-list:hover {
+  margin-bottom: 10px;
+  transition: 0.2s;
+}
+.list-menu-countaner > a {
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+}
+.list-menu-countaner > a:hover {
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.514);
+}
+.list-menu-countaner > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Sign-In {
+  border-left: 1px solid rgba(0, 0, 0, 0.431);
+  height: 30px;
+  width: 140px;
+  color: rgba(0, 0, 0, 0.575);
+  cursor: pointer;
+  transition: 0.3s;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.151);
+}
+.Sign-In:hover {
+  font-size: 16px;
+  transition: 0.3s;
+  color: rgb(0, 0, 0);
+}
+.Sign-Up {
+  width: 140px;
+  height: 30px;
+  background-color: rgb(0, 132, 255);
+  border-radius: 2px;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.322);
+  margin-left: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.Sign-Up:hover {
+  transition: 0.3s;
+  background-color: rgb(0, 107, 207);
+}
+.header-title-countaner {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  margin-top: 10px;
+}
+h1 {
+  font-size: 90px;
+}
+.secound-h1 {
+  font-size: 40px;
+}

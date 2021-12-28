@@ -1,0 +1,479 @@
+/*=====================================================================================*/
+.Admin {
+  height: 100vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.171);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 200;
+  background-color: rgb(238, 238, 238);
+  display: flex;
+  justify-content: space-between;
+}
+.leftBar {
+  width: 200px;
+  height: 100vh;
+  background-image: linear-gradient(
+    to left,
+    #006eff,
+    #006eff,
+    #0d76ff,
+    #0d76ff,
+    #006eff,
+    #006eff
+  );
+}
+.dashboard {
+  width: 200px;
+  height: 50px;
+  background: rgb(248, 248, 248);
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listOptionCountaner {
+  margin-top: 10px;
+}
+.listOption {
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  text-shadow: 1px 1px black;
+  cursor: pointer;
+}
+.listOption:hover {
+  background-color: rgba(255, 255, 255, 0.082);
+}
+/*===========================================================================================================*/
+/*===========================================================================================================*/
+.rightBar {
+  width: 1125px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(221, 221, 221);
+}
+.rightCardCountaner {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.GoBackNavBar {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 50px;
+  width: 98%;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.213);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.GoBackNavBar > div {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.GoBackButton {
+  border: none;
+  border-radius: 3px;
+  width: 70px;
+  height: 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: rgb(255, 15, 15);
+  font-size: 13px;
+  color: white;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.658);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.288);
+}
+.GoBackButton:hover {
+  background-color: rgb(230, 0, 0);
+}
+/*===========================================================================================================*/
+/*===========================================================================================================*/
+.cardAdminUsers {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: white;
+  width: 98%;
+  height: 560px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.213);
+}
+.searchBarUsers {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inputeSearchBar {
+  border-top: 1px solid rgba(0, 0, 0, 0.289);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.289);
+  border-left: 1px solid rgba(0, 0, 0, 0.289);
+  border-right: none;
+  width: 200px;
+  height: 30px;
+  outline: none;
+  padding-left: 10px;
+  background-color: white;
+  z-index: 2;
+}
+.removeFilter {
+  border: 1px solid rgb(233, 18, 18);
+  border-radius: 2px;
+  width: 20px;
+  height: 32px;
+  background: rgb(255, 39, 39);
+  color: white;
+  text-shadow: 1px 1px black;
+  margin-right: 2px;
+  position: relative;
+  left: 23px;
+  opacity: -1;
+  cursor: pointer;
+}
+.submitSearchButton {
+  height: 32px;
+  width: 60px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  border-top: 1px solid rgba(0, 0, 0, 0.289);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.289);
+  border-right: 1px solid rgba(0, 0, 0, 0.289);
+  border-left: none;
+  cursor: pointer;
+  background-color: #157aff;
+  color: white;
+  transition: 0.2s;
+  margin-right: 10px;
+}
+.submitSearchButton:hover {
+  transition: 0.2s;
+  background-color: #328bff;
+}
+.searchByCountaner {
+  width: 250px;
+  height: 27px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.searchByCountaner > button {
+  box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.46);
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 3px;
+  width: 80px;
+  background: rgb(240, 240, 240);
+  cursor: pointer;
+}
+/*===========================================================================================================*/
+/*===========================================================================================================*/
+.cardUsers {
+  height: 480px;
+  margin-top: 10px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.usersCountaner {
+  height: 440px;
+  margin-top: 10px;
+  overflow-y: scroll;
+  width: 920px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+.exampleUser {
+  border: 1px solid rgba(0, 0, 0, 0.501);
+  border-radius: 3px;
+  width: 915px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.46);
+}
+.exampleUser > div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index {
+  width: 60px;
+}
+.userId {
+  border-left: 1px solid rgba(0, 0, 0, 0.371);
+  width: 230px;
+}
+.userName {
+  border-left: 1px solid rgba(0, 0, 0, 0.371);
+  width: 100px;
+}
+.Email {
+  border-left: 1px solid rgba(0, 0, 0, 0.371);
+  width: 220px;
+}
+.Date {
+  border-left: 1px solid rgba(0, 0, 0, 0.371);
+  width: 210px;
+}
+.Delete {
+  border-left: 1px solid rgba(0, 0, 0, 0.371);
+  width: 102px;
+}
+.UserDelete {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.UserDelete:hover {
+  transition: 0.2s;
+  background-color: red;
+  color: white;
+}
+.userCardBorder {
+  margin-top: 5px;
+}
+/*================================================== Comments ===============================================*/
+/*===========================================================================================================*/
+.searchBarComment {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.filterButtonComments {
+  box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.46);
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 3px;
+  width: 80px;
+  height: 25px;
+  background: rgb(240, 240, 240);
+  cursor: pointer;
+  margin: 0px 5px;
+}
+.commentsCountaner {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.commentsCardCountaner {
+  width: 1050px;
+  height: auto;
+  max-height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+}
+.commentCard {
+  border: 1px solid rgb(226, 226, 226);
+  width: 318px;
+  height: auto;
+  margin: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 8px -6px rgba(0, 0, 0, 0.46);
+  border: 1px solid rgba(0, 0, 0, 0.493);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.commentCard:hover {
+  background-color: rgba(0, 132, 255, 0.144);
+}
+.commentsUserCountaner {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.AdminComments {
+  font-size: 15px;
+}
+
+/*================================================== Actualie ===============================================*/
+/*===========================================================================================================*/
+.Actualite {
+  height: 560px;
+}
+.postActuCountaner {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.postActu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  height: 50px;
+}
+.addPictureActuCountaner {
+  height: 35px;
+  width: 180px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2885ff;
+  color: white;
+  cursor: pointer;
+  text-shadow: 1px 0px black;
+  box-shadow: 2px 3px 5px -2px rgba(0, 0, 0, 0.411);
+  transition: 0.2s;
+}
+.addPictureActuCountaner:hover {
+  background-color: #006eff;
+  transition: 0.2s;
+}
+.addPictureActuCountaner:active {
+  background-color: #0061df;
+}
+.addText {
+  margin-right: 10px;
+}
+.addPictureActu {
+  width: 200px;
+  height: 20px;
+  display: none;
+  border: 1px solid black;
+}
+.imageIcone {
+  height: 20px;
+  margin-left: 10px;
+}
+/*================================================================*/
+.cardPublicationAdminCountaner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 487px;
+}
+.cardPublicationAdmin {
+  width: 1060px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+}
+.leftBarPuctureAdmin {
+  width: 680px;
+  height: 455px;
+  box-shadow: 10px 10px 10px -6px rgba(0, 0, 0, 0.137);
+  background-color: rgb(27, 29, 34);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.leftBarPuctureAdmin > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagePublicationAdmin {
+  max-height: 456px;
+  max-width: 680px;
+  color: rgba(255, 255, 255, 0.678);
+}
+/*===========================================================*/
+.rightBarCommentAdmin {
+  width: auto;
+  height: 505px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+/*==================================*/
+.reactButtonsAdmin > div {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+.reactButtonsAdmin > div > img {
+  width: 27px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+/*==================================*/
+.actuDescriptionCountanerAdmin {
+  height: 450px;
+  width: 350px;
+  margin-left: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.207);
+  background-color: rgb(245, 245, 245);
+}
+.titreRightBarActuAdmin {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+  letter-spacing: 1px;
+}
+.titreRightBarActuAdmin > input {
+  border: 1px solid black;
+  min-height: 50px;
+  max-height: 80px;
+  outline: none;
+  display: flex;
+  align-items: flex-start;
+}
+.descriptionRightBarActuAdmin {
+  padding: 5px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.titreAdminActuPost {
+  width: 320px;
+  height: 70px;
+  outline: none;
+  padding: 8px;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.219);
+  resize: none;
+  font-size: 20px;
+}
+.descriptionAdminActuPost {
+  width: 317px;
+  height: 300px;
+  outline: none;
+  padding: 10px;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.219);
+  resize: none;
+}
+.postBTNActu {
+  height: 30px;
+  width: 80px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 70px;
+  background-color: #2885ff;
+  border: none;
+  color: white;
+  outline: none;
+  box-shadow: 2px 2px 15px 0px rgba(0, 0, 0, 0.219);
+}
+.postBTNActu:hover {
+  background-color: #006eff;
+  transition: 0.2s;
+}
+.postBTNActu:active {
+  background-color: #0061df;
+}

@@ -1,0 +1,178 @@
+.seconecter {
+  background-image: linear-gradient(to bottom left, #f4af02af, #ff4a53);
+  height: 99.99vh;
+  width: 99.9vw;
+  position: fixed;
+  top: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  z-index: 60;
+}
+.seconecterCountaner {
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  width: 1000px;
+  height: 500px;
+  box-shadow: 20px 20px 10px -12px rgba(0, 0, 0, 0.205);
+  background-color: white;
+}
+.loginLefttBar {
+  height: 500px;
+  width: 600px;
+  display: grid;
+  place-items: center;
+  background-color: rgb(255, 255, 255);
+}
+/*SE CONECTER==========================================================*/
+.borderSeconecter {
+  height: 450px;
+  width: 450px;
+}
+.titreSeConecter {
+  text-align: center;
+  margin: 30px 0px;
+  font-size: 40px;
+}
+.underTitre {
+  text-align: center;
+  color: rgb(78, 78, 78);
+}
+.GmailPasswordCountaner {
+  width: 100%;
+  height: 150px;
+  margin: 0px 0px 50px 0px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.GmailPasswordCountaner2 {
+  width: 100%;
+  height: 200px;
+  margin: 0px 0px 50px 0px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.GmailPasswordCountaner2 > input {
+  padding: 10px;
+  width: 280px;
+  height: 30px;
+  margin: 7px;
+  box-shadow: 15px 15px 10px -12px rgba(0, 0, 0, 0.178);
+  background-color: rgb(238, 238, 238);
+  outline: none;
+  border: none;
+}
+.GmailPasswordCountaner > input {
+  padding: 10px;
+  width: 280px;
+  height: 30px;
+  margin: 7px;
+  box-shadow: 15px 15px 10px -12px rgba(0, 0, 0, 0.178);
+  background-color: rgb(238, 238, 238);
+  outline: none;
+  border: none;
+}
+.submitloginCountaner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.submitlogin {
+  text-align: center;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 100px;
+  width: 180px;
+  height: 45px;
+  box-shadow: 15px 15px 10px -12px rgba(0, 0, 0, 0.178);
+  background-image: linear-gradient(to bottom left, #02a7f4, #6f7eff);
+  position: relative;
+  cursor: pointer;
+  animation: buttonSubmit2;
+  animation-duration: 0.3s;
+  color: white;
+  font-size: 15px;
+}
+.submitlogin:hover {
+  animation: buttonSubmit;
+  animation-duration: 0.3s;
+  position: relative;
+  bottom: 5px;
+}
+@keyframes buttonSubmit {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 5px;
+  }
+}
+@keyframes buttonSubmit2 {
+  from {
+    bottom: 5px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+/*===============================================================================*/
+.registerRightBar {
+  height: 500px;
+  width: 400px;
+  background-image: linear-gradient(to bottom left, #02a7f4, #3246ff);
+  display: flex;
+  justify-content: center;
+  color: white;
+  position: relative;
+}
+.CreeUnComptCountaner {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 340px;
+}
+.CreeUnComptButton {
+  border: 2px solid rgb(226, 226, 226);
+  border-radius: 100px;
+  width: 180px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+.CreeUnComptButton:hover {
+  background-color: rgba(255, 255, 255, 0.096);
+}
+.titreCreeUnCompt {
+  font-size: 50px;
+}
+.messageCreeCompt {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: red;
+}
+.descriptionCreeUnCompt {
+  margin: 20px 0px 30px 0px;
+  color: rgba(255, 255, 255, 0.788);
+}
+.GoBack {
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  padding: 3px 8px;
+  border-radius: 3px;
+  position: relative;
+  bottom: 100px;
+  background-color: rgba(255, 255, 255, 0.089);
+  box-shadow: 10px 10px 10px -8px rgba(0, 0, 0, 0.418);
+  cursor: pointer;
+}
+.GoBack:hover {
+  background-color: rgba(255, 255, 255, 0.164);
+}

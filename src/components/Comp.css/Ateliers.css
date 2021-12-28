@@ -1,0 +1,72 @@
+.Ateliers {
+  margin-top: 100px;
+}
+.atelierCardsCounatner {
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin-right: 40px;
+  padding-bottom: 100px;
+}
+.atelierCardCountaner {
+  width: 1220px;
+}
+.atelierCard {
+  width: 1220px;
+  height: 450px;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+.leftAtelierCard {
+  height: 432px;
+  box-shadow: 10px 10px 10px -10px black;
+  margin-top: 10px;
+}
+.rightAtelierCard {
+  width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.descriptionAtelier {
+  width: 550px;
+  height: 400px;
+}
+.descriptionAtelier > p {
+  font-size: 40px;
+  margin: 0px 0px 10px 0px;
+  letter-spacing: 2px;
+  background-color: rgb(233, 233, 233);
+  width: 470px;
+  padding: 2px 10px;
+  box-shadow: 10px 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+.descriptionAtelier > div {
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: black;
+  margin-left: 20px;
+}
+/*==========================================================================*/
+.CarouselAtelier1 {
+  width: 650px;
+  height: 432px;
+}
+.CarouselAtelier1 > div {
+  height: 432px;
+}
+.underdescriptionAtelier {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.underdescriptionAtelier > div {
+  width: 1000px;
+  padding: 5px;
+}
+.xAtelier {
+  position: relative;
+  right: 53px;
+}

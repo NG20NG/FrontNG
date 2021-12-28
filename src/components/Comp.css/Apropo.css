@@ -1,0 +1,26 @@
+.Apropo {
+  display: grid;
+  place-items: center;
+}
+.secound-Apropo {
+  width: 1000px;
+  margin: 50px;
+}
+.titrePresontation {
+  font-size: 50px;
+  margin: 0px 0px 30px 0px;
+}
+.CadreBlanc {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(238, 238, 238);
+  box-shadow: 20px 20px 10px -12px rgba(0, 0, 0, 0.178);
+}
+.OBJECTIFS {
+  width: 1000px;
+  margin: 50px;
+}
+.CONCLUSION {
+  width: 1000px;
+  margin: 50px;
+}

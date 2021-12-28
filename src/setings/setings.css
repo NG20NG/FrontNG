@@ -1,0 +1,238 @@
+.UserSetings {
+  border: 1px solid black;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: black;
+  background-color: rgba(33, 33, 33, 0.556);
+}
+.UserSetingsCardCountaner {
+  height: 430px;
+  width: 600px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom left, #026bf4, #0064e6);
+  box-shadow: 3px 3px 10px -5px rgba(0, 0, 0, 0.671);
+}
+.Profile {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.profilePic {
+  border-radius: 100px;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.583);
+}
+/*===================================*/
+.test {
+  height: 100%;
+  width: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.addPicCountaner {
+  display: flex;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: 23px;
+}
+.addPicInputUser {
+  display: none;
+}
+.addPicTextUser {
+  border-radius: 5px;
+  margin-left: auto;
+  width: 70px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e8e8e8;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.274);
+}
+.addPicTextUser:hover {
+  background-color: #dcdcdc;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.377);
+}
+.submitUserPicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  border-radius: 5px;
+  height: 35px;
+  width: 100px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  text-shadow: 1px 1px black;
+  background-color: #1379ff;
+  box-shadow: 2px 2px 10px -5px rgba(0, 0, 0, 0.426);
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.submitUserPicture:hover {
+  transition-duration: 0.4s;
+  background-color: #00d612;
+}
+/*===================================*/
+.userNameSetings {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+}
+/*=====================================================================*/
+.userInformation {
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  border-radius: 10px;
+  height: 250px;
+  width: 550px;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+.userInformation > div {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.leftBarInfo {
+  padding: 10px;
+  font-weight: 500;
+}
+.UpdateButton {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 70px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  box-shadow: 5px 5px 10px -5px rgba(0, 0, 0, 0.322);
+}
+.removeSetings {
+  width: 38px;
+  height: 25px;
+  border-radius: 5px;
+  position: relative;
+  left: 272px;
+  bottom: 5px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: white;
+  cursor: pointer;
+  text-shadow: 1px 1px black;
+}
+.removeSetings:hover {
+  background-color: rgb(243, 0, 0);
+}
+/*==============================================================================================*/
+/*==============================================================================================*/
+/* .updateNameActuCountaner {
+  border: 1px solid black;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.412);
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.updateNameActu {
+  height: 250px;
+  width: 350px;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.186);
+}
+.updateNameTitre {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 500;
+  border: 1px solid black;
+}
+.nameInputCountaner {
+  height: 185px;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 20px;
+}
+.nameUpdateCountaner,
+.passwordUpdateCountaner {
+  margin: 5px;
+}
+
+:is(.nameUpdateCountaner, .passwordUpdateCountaner) input {
+  height: 35px;
+  width: 250px;
+  padding: 0px 5px;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.179);
+}
+:is(.nameUpdateCountaner, .passwordUpdateCountaner) input:hover {
+  box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.295);
+}
+:is(.nameUpdateCountaner, .passwordUpdateCountaner) input:focus {
+  box-shadow: 0px 5px 10px -6px rgba(0, 0, 0, 0.295);
+}
+.goBackUpdateName {
+  position: relative;
+  bottom: 52px;
+  left: 160px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+*/
