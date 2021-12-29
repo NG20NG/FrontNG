@@ -49,7 +49,7 @@ const UserSetings = () => {
         getUserById()
     }, [])
     if (timePic === undefined) {
-        gsap.to(".profilePic", { backgroundImage: `url(${url}/ProfilePic/${userData?.profilePic})` })
+        gsap.to(".profilePic", { backgroundImage: `url(${url}/userProfilePic/${userData?.profilePic})` })
     } else {
         gsap.to(".test", { backgroundImage: `url(${addPicUser})` })
         gsap.to(".profilePic", { backgroundImage: `none` })
