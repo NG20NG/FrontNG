@@ -10,14 +10,18 @@
   padding-bottom: 100px;
 }
 .atelierCardCountaner {
-  width: 1220px;
+  width: 100vw;
+  flex-direction: column;
+  display: flex;
+  align-self: center;
 }
 .atelierCard {
-  width: 1220px;
+  width: 100%;
   height: 450px;
   margin: 10px 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  border: 1px solid black;
 }
 .leftAtelierCard {
   height: 432px;
@@ -29,6 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 .descriptionAtelier {
   width: 550px;
@@ -65,8 +70,4 @@
 .underdescriptionAtelier > div {
   width: 1000px;
   padding: 5px;
-}
-.xAtelier {
-  position: relative;
-  right: 53px;
 }

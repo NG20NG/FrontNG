@@ -1,12 +1,16 @@
 //
 //
-import { useState } from "react"
+import { useState, useContext } from "react"
+//
+import { Random } from "../../Contexts/randomContext"
+//
 import imageIcone from "./icones/imageIcone.png"
 //
 //
 //
 //
 const Actualite = () => {
+    const { url } = useContext(Random)
     const [pic, setPic] = useState<any>(null)
     const [postActu, setPostActu] = useState<any>({
         "title": "",
@@ -30,12 +34,12 @@ const Actualite = () => {
     const addActuPublication: any = () => {
         const newPicActu = new FormData()
         newPicActu.append("picture", pic)
-        fetch("http://localhost:3001/Actualite", {
+        fetch(`${url}/Actualite`, {
             method: 'POST',
             body: newPicActu,
         }).then((dataImage: any) => dataImage?.json()).then((data: any) => {
             console.log(data);
-            fetch(`http://localhost:3001/Actualite/${data?._id}`, {
+            fetch(`${url}/Actualite/${data?._id}`, {
                 method: 'PATCH',
                 headers: {
                     Accept: "application/json",

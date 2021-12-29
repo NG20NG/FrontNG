@@ -4,13 +4,16 @@
 //
 //
 import gsap from "gsap"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
+//
+import { Random } from "../../Contexts/randomContext"
 //
 const AllUsers = () => {
+    const { url } = useContext(Random)
     //========================================================================================================================
     const [allUsers, setAllUsers] = useState<[]>()
     const getAllUsers = async () => {
-        const req = await fetch("http://localhost:3001/users")
+        const req = await fetch(`${url}/users`)
         const users = await req.json()
         setAllUsers(users)
     }
@@ -56,7 +59,7 @@ const AllUsers = () => {
                     "Content-Type": "application/json",
                 },
             };
-            const deletedData = await fetch(`http://localhost:3001/users/${ID}`, option)
+            const deletedData = await fetch(`${url}/users/${ID}`, option)
             console.log(deletedData);
             alert("GG")
             window.location.reload();

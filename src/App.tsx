@@ -29,7 +29,12 @@ import { LoginButton, UserLogedIn } from "./register/UserLogedIn"
 //
 import logoChams from './image/logo.png';
 //
+
+require('dotenv').config()
 function App() {
+  let url = process.env.REACT_APP_URL
+  console.log(url);
+
   //========================================================================================================================
   const [scrole, setScrole] = useState(0);
   //========================================================================================================================
@@ -50,6 +55,7 @@ function App() {
   }, 10)
   //========================================================================================================================
   const [Session, setSession] = useState<any>(cookie.load("user"))
+  console.log(Session?.user);
   const [ifAdmin, setIfAdim] = useState(false)
   const [isSetings, setIsSetings] = useState(false)
   const setingsOn = () => {
@@ -58,6 +64,7 @@ function App() {
   if (Session?.user === undefined) {
     cookie.remove("user", { path: "/" })
   }
+
   //========================================================================================================================
   const [emailUser, setEmailUser] = useState<any>({
     email: "",
@@ -82,7 +89,7 @@ function App() {
   //========================================================================================================================
   return (<div className="PreApp">
     <Router>
-      <Random.Provider value={{ seconecterFunc, setEmailUser, setHNavBar, Session, setingsOn, setSession, emailUser, setIfAdim, ifAdmin }}>
+      <Random.Provider value={{ url, seconecterFunc, setEmailUser, setHNavBar, Session, setingsOn, setSession, emailUser, setIfAdim, ifAdmin }}>
         <div className="App">
           {Session?.user?.nom === "Admin" && Session?.user?.admin === ifAdmin ? <Admin /> : <></>}
           {isSetings === false ? null : <Setings />}

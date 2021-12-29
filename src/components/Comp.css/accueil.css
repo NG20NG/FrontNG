@@ -4,7 +4,7 @@
 }
 .top-card-countaner {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   margin-bottom: 150px;
 }

@@ -23,7 +23,7 @@ export const LoginButton = () => {
 
 //==============================================================================================
 export const UserLogedIn = () => {
-    let { Session, ifAdmin, setIfAdim, setingsOn } = useContext(Random)
+    let { url, Session, ifAdmin, setIfAdim, setingsOn } = useContext(Random)
 
     let [options, setOptions] = useState(false)
     setTimeout(() => {
@@ -48,8 +48,9 @@ export const UserLogedIn = () => {
         }
     }
     const [userData, setUserData] = useState<any>()
+
     const getUserById = async () => {
-        const req = await fetch(`http://localhost:3001/users/${Session?.user?._id}`)
+        const req = await fetch(`${url}/users/${Session?.user?._id}`)
         const data = await req.json()
         setUserData(data)
     }
@@ -57,7 +58,7 @@ export const UserLogedIn = () => {
         getUserById()
     }, [])
 
-    gsap.to(".newUserLogo", { backgroundImage: `url(http://localhost:3001/userProfilePic/${userData?.profilePic})` })
+    gsap.to(".newUserLogo", { backgroundImage: `url(${url}/ProfilePic/${userData?.profilePic})` })
     return <>
         <div className="userLogedIn">
             <div className="userPicCountaner">
@@ -71,10 +72,15 @@ export const UserLogedIn = () => {
             <div className="UserOptionsButton" onClick={() => setOptions(!options)}>
                 <img className="logoGoDown" src={userGoDown} alt="open" />
             </div>
+
             {options === false ? <></> : <>
+
                 {Session?.user?.nom === "Admin" && Session?.user?.admin === true ?
-                    <div className="adminButton" onClick={() => dashBord()}>Admin</div> : <></>}
-                <div className="setingsButton" onClick={() => setingsOn()}>Paramètre&nbsp;<div>d'utilisateur</div></div>
+                    <div className="adminButton"
+                        onClick={() => dashBord()}>Admin</div> : <></>}
+
+                <div className="setingsButton"
+                    onClick={() => setingsOn()}>Paramètre&nbsp;<div>d'utilisateur</div></div>
                 <Link to="/"><div className="desconectButton" onClick={() => removeCookies()}>Déconnecter</div></Link>
             </>}
         </div>

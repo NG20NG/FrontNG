@@ -9,12 +9,12 @@ import { Random } from "../Contexts/randomContext"
 //
 const Actualites = () => {
 
-    const { Session } = useContext(Random)
+    const { url, Session } = useContext(Random)
 
     //=====================================================================================
     const [commentActu, setCommentActu] = useState<any>(null)
     const getCommentActu = async () => {
-        const publication = await fetch("http://localhost:3001/Actualite")
+        const publication = await fetch(`${url}/Actualite`)
         const pubData = await publication.json()
         setCommentActu(pubData)
     }
@@ -31,7 +31,7 @@ const Actualites = () => {
                     "Content-Type": "application/json",
                 },
             };
-            const req = await fetch(`http://localhost:3001/Actualite/${id}`, option)
+            const req = await fetch(`${url}/Actualite/${id}`, option)
             const data = req.json()
             console.log(data);
         } else {
@@ -45,7 +45,7 @@ const Actualites = () => {
                 {commentActu?.map((actu: any, index: any) => {
                     return (<div key={index} className="cardPublication">
                         <div className="leftBarPucture">
-                            <div><img className="imagePublication" src={"http://localhost:3001/uploads/" + actu?.picture} alt="publication" ></img></div>
+                            <div><img className="imagePublication" src={`${url}/uploads/` + actu?.picture} alt="publication" ></img></div>
                         </div>
                         <div className="rightBarComment">
                             <div>

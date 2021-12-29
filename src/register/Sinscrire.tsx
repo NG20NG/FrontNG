@@ -7,7 +7,7 @@ import gsap from "gsap"
 //
 //
 const SignIn = () => {
-    let { emailUser } = useContext(Random)
+    let { url, emailUser } = useContext(Random)
     //====================================================================
     let [iferr, setIferr] = useState<any>()
     let [postUser, setPostUser] = useState<any>({
@@ -34,7 +34,7 @@ const SignIn = () => {
                 "Content-Type": "application/json",
             },
         };
-        const req = await fetch("http://localhost:3001/users", option)
+        const req = await fetch(`${url}/users`, option)
         const data = await req.json()
         setIferr(data)
         cookie.save("user", data, { path: '/' })
@@ -76,7 +76,7 @@ const SignIn = () => {
 //====================================================================================================================
 const LogIn = () => {
     //===============================================================
-    let { emailUser } = useContext(Random)
+    let { url, emailUser } = useContext(Random)
     let [loginUser, setLoginUser] = useState<any>({
         email: emailUser.email,
         password: ""
@@ -84,7 +84,7 @@ const LogIn = () => {
     //===============================================================
     let [iferr, setIferr] = useState<any>()
     const LoginUser = async () => {
-        const req = await fetch("http://localhost:3001/users", {
+        const req = await fetch(`${url}/users`, {
             method: "POST",
             body: JSON.stringify(loginUser),
             headers: {

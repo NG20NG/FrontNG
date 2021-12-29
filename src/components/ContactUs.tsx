@@ -12,7 +12,7 @@ import gsap from "gsap"
 const ContactUs = () => {
     let lienGoogleMap = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.820083786059!2d3.071228015287174!3d36.70286107996878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fad1e90ff6457%3A0xf15765159226a81c!2sMaison%20de%20jeunes%20Idriss%20Bilal%2C%20Ain%20Naadja!5e0!3m2!1sfr!2sdz!4v1636163193440!5m2!1sfr!2sdz`
     //========================================================================================================================
-    let { Session } = useContext(Random)
+    let { url, Session } = useContext(Random)
     //========================================================================================================================
     let [commentaire, setcommentaire] = useState({
         comment: "",
@@ -21,6 +21,8 @@ const ContactUs = () => {
             _id: Session?.user?._id
         }
     })
+    console.log(url + "/users");
+
     //========================================================================================================================
     setTimeout(() => {
         if (commentaire.comment.length > 19) {
@@ -55,7 +57,7 @@ const ContactUs = () => {
                     "Content-Type": "application/json",
                 },
             };
-            fetch("http://localhost:3001/comment", option)
+            fetch(`${url}/comment`, option)
         }
     }
     //========================================================================================================================

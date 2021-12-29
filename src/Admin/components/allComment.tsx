@@ -1,7 +1,8 @@
 //
 import gsap from "gsap"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 //
+import { Random } from "../../Contexts/randomContext"
 //
 //
 //
@@ -9,9 +10,11 @@ import { useEffect, useState } from "react"
 //
 const Comment = () => {
     //
+    const { url } = useContext(Random)
+    //
     const [allComments, setAllComments] = useState<any>()
     const getAllComments = async () => {
-        const com = await fetch("http://localhost:3001/comment")
+        const com = await fetch(`${url}/comment`)
         const comments = await com.json()
         setAllComments(comments)
     }
@@ -31,7 +34,7 @@ const Comment = () => {
                     "Content-Type": "application/json",
                 },
             };
-            await fetch(`http://localhost:3001/comment/${ID}`, option)
+            await fetch(`${url}/comment/${ID}`, option)
             alert("GG you just deleted the comment")
             window.location.reload();
         } else {
