@@ -39,7 +39,6 @@
   flex-direction: column;
   display: flex;
   align-items: center;
-  border: 1px solid black;
 }
 .listOption {
   height: 50px;
@@ -70,7 +69,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px solid black;
 }
 .GoBackNavBar {
   border-bottom-left-radius: 5px;
