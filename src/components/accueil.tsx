@@ -89,30 +89,28 @@ const Accueil = () => {
                     </a>
                 </div>
             </div>
-            <div>
-                <div className="carouselCountaner">
-                    <Carousel
-                        className="CarouselChild"
-                        autoPlay={true}
-                        infiniteLoop={true}
-                        interval={5000}
-                        showStatus={false}
-                        showIndicators={false}
-                        showThumbs={false}
-                        centerSlidePercentage={50}
-                        transitionTime={1200}>
-                        <div><img style={{ height: height, maxWidth: width }} src={pic1} alt="pic" /></div>
-                        <div><img style={{ height: height, maxWidth: width }} src={pic2} alt="pic" /></div>
-                        <div><img style={{ height: height, maxWidth: width }} src={pic3} alt="pic" /></div>
-                        <div><img style={{ height: height, maxWidth: width }} src={pic4} alt="pic" /></div>
-                        <div><img style={{ height: height, maxWidth: width }} src={pic5} alt="pic" /></div>
-                    </Carousel>
-                    <div className="descriptionCarousel">
-                        <p className="titreCarouselDescription">Présentation</p>
-                        Dans notre projet, la prise en charge que nous proposons, passe par une présence artistique active,
-                        une méthode qui certes est très peu utilisée en Algérie, mais qui se révèle à nos yeux des plus bénéfiques
-                        pour travailler le bien-être et la stabilité des personnes en difficulté.
-                    </div>
+            <div className="carouselCountaner">
+                <Carousel
+                    className="CarouselChild"
+                    autoPlay={true}
+                    infiniteLoop={true}
+                    interval={5000}
+                    showStatus={false}
+                    showIndicators={false}
+                    showThumbs={false}
+                    centerSlidePercentage={50}
+                    transitionTime={1200}>
+                    <div><img style={{ height: height, maxWidth: width }} src={pic1} alt="pic" /></div>
+                    <div><img style={{ height: height, maxWidth: width }} src={pic2} alt="pic" /></div>
+                    <div><img style={{ height: height, maxWidth: width }} src={pic3} alt="pic" /></div>
+                    <div><img style={{ height: height, maxWidth: width }} src={pic4} alt="pic" /></div>
+                    <div><img style={{ height: height, maxWidth: width }} src={pic5} alt="pic" /></div>
+                </Carousel>
+                <div className="descriptionCarousel">
+                    <p className="titreCarouselDescription">Présentation</p>
+                    Dans notre projet, la prise en charge que nous proposons, passe par une présence artistique active,
+                    une méthode qui certes est très peu utilisée en Algérie, mais qui se révèle à nos yeux des plus bénéfiques
+                    pour travailler le bien-être et la stabilité des personnes en difficulté.
                 </div>
             </div>
         </div>

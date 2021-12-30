@@ -57,7 +57,7 @@ export const UserLogedIn = () => {
     useEffect(() => {
         getUserById()
     }, [])
-    console.log()
+    console.log(userData)
 
     let userProfilePic: any
     gsap.to(".newUserLogo", { backgroundImage: `url(${url}/userProfilePic/${userData?.profilePic})` })
