@@ -1,6 +1,5 @@
 //
 import "./App.css"
-import "./mobile.css"
 import {
   BrowserRouter as Router,
   Switch,
@@ -111,11 +110,6 @@ function App() {
                     <Link className="lefy-list about" to="Apropos" onClick={() => setHNavBar("/Apropos")}><li>À-propos</li></Link>
                     {Session?.user === undefined ? <LoginButton /> : <UserLogedIn />}
                   </ul>
-                  <div className="BTN-menu-mobile">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
                 </nav>
               </div>
               <div className="header-title-countaner">

@@ -54,12 +54,11 @@ export const UserLogedIn = () => {
         const data = await req.json()
         setUserData(data)
     }
+    console.log(`url(${url}/userProfilePic/${userData?.profilePic})`);
+
     useEffect(() => {
         getUserById()
     }, [])
-    console.log(userData)
-
-    let userProfilePic: any
     gsap.to(".newUserLogo", { backgroundImage: `url(${url}/userProfilePic/${userData?.profilePic})` })
     return <>
         <div className="userLogedIn">

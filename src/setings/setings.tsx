@@ -11,6 +11,7 @@ import gsap from "gsap"
 const UserSetings = () => {
     //====================================================================================
     const { url, setingsOn, Session } = useContext(Random)
+
     //=================================================
     const [timePic, setTimePic] = useState<any>()
     const [addPicUser, setAddPicUser] = useState<any>()
@@ -30,11 +31,10 @@ const UserSetings = () => {
         if (timePic !== undefined) {
             const newPicActu = new FormData()
             newPicActu.append("picture", timePic)
-            let id = Session?.user?._id
-            fetch(`${url}/users/${id}`, {
+            fetch(`${url}/users/${Session?.user?._id}`, {
                 method: 'PATCH',
                 body: newPicActu
-            }).then(() => window.location.reload())
+            })
         } else {
             console.log("123");
         }
@@ -49,7 +49,7 @@ const UserSetings = () => {
         getUserById()
     }, [])
     if (timePic === undefined) {
-        gsap.to(".profilePic", { backgroundImage: `url(${url}/userProfilePic/${userData?.profilePic})` })
+        gsap.to(".profilePic", { backgroundImage: `url(${url}/Public/userProfilePic/${userData?.profilePic})` })
     } else {
         gsap.to(".test", { backgroundImage: `url(${addPicUser})` })
         gsap.to(".profilePic", { backgroundImage: `none` })

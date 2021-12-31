@@ -48,25 +48,6 @@ nav {
   z-index: 50;
   width: 100%;
 }
-.BTN-menu-mobile {
-  height: 30px;
-  width: 40px;
-  flex-direction: column;
-  display: none;
-  justify-content: space-around;
-  align-items: center;
-  cursor: pointer;
-  margin-right: 20px;
-}
-.BTN-menu-mobile > div {
-  height: 4px;
-  width: 30px;
-  border-radius: 5px;
-  background-color: black;
-}
-.BTN-menu-mobile:hover > div {
-  background-color: rgb(34, 34, 34);
-}
 .LogoChams {
   height: 80px;
   width: 80px;
