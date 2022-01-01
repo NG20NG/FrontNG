@@ -6,6 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { storage } from "./firebase"
 //====================================================================================
 import { Random } from "./Contexts/randomContext"
 import { useState } from "react";
@@ -31,7 +32,14 @@ import logoChams from './image/logo.png';
 //
 
 require('dotenv').config()
+
 function App() {
+  gsap.config({
+    autoSleep: 60,
+    force3D: false,
+    nullTargetWarn: false,
+    units: { left: "%", top: "%", rotation: "rad" }
+  });
   let url = process.env.REACT_APP_URL
 
   //========================================================================================================================
@@ -52,9 +60,10 @@ function App() {
       gsap.to(".lefy-list", { color: "white", duration: 0.1, textShadow: "2px 2px rgba(0, 0, 0, 0.494)" })
     }
   }, 10)
+
   //========================================================================================================================
   const [Session, setSession] = useState<any>(cookie.load("user"))
-  console.log(Session?.user);
+
   const [ifAdmin, setIfAdim] = useState(false)
   const [isSetings, setIsSetings] = useState(false)
   const setingsOn = () => {
@@ -85,10 +94,11 @@ function App() {
       gsap.to(".secound-h1", { zIndex: 1, opacity: 1, duration: 0.2 })
     }
   }, 30)
+
   //========================================================================================================================
   return (<div className="PreApp">
     <Router>
-      <Random.Provider value={{ url, seconecterFunc, setEmailUser, setHNavBar, Session, setingsOn, setSession, emailUser, setIfAdim, ifAdmin }}>
+      <Random.Provider value={{ url, storage, seconecterFunc, setEmailUser, setHNavBar, Session, setingsOn, setSession, emailUser, setIfAdim, ifAdmin }}>
         <div className="App">
           {Session?.user?.nom === "Admin" && Session?.user?.admin === ifAdmin ? <Admin /> : <></>}
           {isSetings === false ? null : <Setings />}

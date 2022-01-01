@@ -12,14 +12,14 @@ const AllUsers = () => {
     const { url } = useContext(Random)
     //========================================================================================================================
     const [allUsers, setAllUsers] = useState<[]>()
-    const getAllUsers = async () => {
-        const req = await fetch(`${url}/users`)
-        const users = await req.json()
-        setAllUsers(users)
-    }
     useEffect(() => {
+        const getAllUsers = async () => {
+            const req = await fetch(`${url}/users`)
+            const users = await req.json()
+            setAllUsers(users)
+        }
         getAllUsers()
-    }, [])
+    }, [url])
     //========================================================================================================================
     const [searchData, setSearchData] = useState<String>()
     //========================================================================================================================

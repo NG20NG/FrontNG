@@ -25,7 +25,7 @@ const Accueil = () => {
             <div className="contactUs">
                 <p className="titreFouter contacttitre">Nous contacter</p>
                 <Link to="/Contact"><p className="desc hov" onClick={() => setHNavBar("/Contact")}>Support</p></Link>
-                <Link to="/Contact"><p className="desc hov" onClick={() => setHNavBar("/Contact")}>Numéro : 0659 10 56 82</p></Link>
+                <Link to="/Contact"><p className="desc hov" onClick={() => setHNavBar("/Contact")}>Numéro : +213 000 000 00</p></Link>
                 <p className="hov">Email : Nassim@gmail.com</p>
                 <p className="hov">CCP : CCP</p>
             </div>

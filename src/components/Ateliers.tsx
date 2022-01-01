@@ -37,6 +37,9 @@ const Ateliers = () => {
     let height = 432
     let width = 650
     return <div className="Ateliers">
+        <div className="titreAteliersH2">
+            <h2>N'au atelier</h2>
+        </div>
         <div className="atelierCardsCounatner">
             {/*=======================================================================*/}
             <div className="atelierCardCountaner">

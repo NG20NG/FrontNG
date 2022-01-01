@@ -39,7 +39,7 @@
 .newUserLogo {
   height: 30px;
   width: 30px;
-  background-size: contain;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
 }

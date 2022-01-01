@@ -13,14 +13,14 @@ const Comment = () => {
     const { url } = useContext(Random)
     //
     const [allComments, setAllComments] = useState<any>()
-    const getAllComments = async () => {
-        const com = await fetch(`${url}/comment`)
-        const comments = await com.json()
-        setAllComments(comments)
-    }
     useEffect(() => {
+        const getAllComments = async () => {
+            const com = await fetch(`${url}/comment`)
+            const comments = await com.json()
+            setAllComments(comments)
+        }
         getAllComments()
-    }, [])
+    }, [url])
     //===================================================================================================
     const deleteComment = async (ID: any) => {
         let Delete = prompt(`type the User Name to delete ( DELETE )`)

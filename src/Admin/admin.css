@@ -480,3 +480,7 @@
 .postBTNActu:active {
   background-color: #0061df;
 }
+.postBTNActu > img {
+  width: 60px;
+  height: 30px;
+}

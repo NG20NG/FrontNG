@@ -4,14 +4,15 @@ import "./setings.css"
 import { Random } from "../Contexts/randomContext"
 import { useContext, useEffect, useState } from "react"
 import gsap from "gsap"
+import { ref, getDownloadURL, uploadBytesResumable } from "@firebase/storage"
 //
 //
 //
 //
 const UserSetings = () => {
     //====================================================================================
-    const { url, setingsOn, Session } = useContext(Random)
-
+    const { url, storage, setingsOn, Session } = useContext(Random)
+    const [userData, setUserData] = useState<any>()
     //=================================================
     const [timePic, setTimePic] = useState<any>()
     const [addPicUser, setAddPicUser] = useState<any>()
@@ -27,32 +28,49 @@ const UserSetings = () => {
         }
     }
     //==================================================
-    const updateUserPrifilePic = () => {
-        if (timePic !== undefined) {
-            const newPicActu = new FormData()
-            newPicActu.append("picture", timePic)
-            fetch(`${url}/users/${Session?.user?._id}`, {
-                method: 'PATCH',
-                body: newPicActu
-            })
-        } else {
-            console.log("123");
-        }
-    }
-    const [userData, setUserData] = useState<any>()
-    const getUserById = async () => {
-        const req = await fetch(`${url}/users/${Session?.user?._id}`)
-        const data = await req.json()
-        setUserData(data)
-    }
     useEffect(() => {
+        const getUserById = async () => {
+            const req = await fetch(`${url}/users/${Session?.user?._id}`)
+            const data = await req.json()
+            setUserData(data)
+        }
         getUserById()
-    }, [])
-    if (timePic === undefined) {
-        gsap.to(".profilePic", { backgroundImage: `url(${url}/Public/userProfilePic/${userData?.profilePic})` })
-    } else {
+    }, [url, Session?.user?._id])
+
+    const [per, setPer] = useState<Number | String>(0 + "%")
+    const uploadFile = () => {
+        const storageRef = ref(storage, "profilePicture/" + timePic?.name)
+        const uploadTask = uploadBytesResumable(storageRef, timePic)
+        uploadTask?.on("state_changed", (snapshot: any) => {
+            setPer(snapshot?.bytesTransferred / snapshot?.totalBytes)
+        },
+            (error: Error) => {
+                console.log(error + " <==== ERROR");
+            },
+            () => {
+                getDownloadURL(uploadTask?.snapshot.ref)
+                    .then((urlfirebase: any) => {
+                        fetch(`${url}/users/${Session?.user?._id}`, {
+                            method: 'PATCH',
+                            headers: {
+                                Accept: "application/json",
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({ profilePic: urlfirebase + "" }),
+                        }
+                        ).then(url => url?.json()).then(storeData => {
+                            console.log(storeData);
+                        })
+                    })
+            }
+        )
+    }
+
+    if (timePic !== undefined) {
         gsap.to(".test", { backgroundImage: `url(${addPicUser})` })
         gsap.to(".profilePic", { backgroundImage: `none` })
+    } else {
+        gsap.to(".profilePic", { backgroundImage: `url(${Session?.user?.profilePic})` })
     }
     //====================================================================================
     return <div className="UserSetings">
@@ -60,15 +78,14 @@ const UserSetings = () => {
             <div className="removeSetings" onClick={() => setingsOn()}>X</div>
             <div className="Profile">
                 <div className="profilePic">
-                    <div className="test">
-                    </div>
+                    {timePic !== undefined ? <img src={addPicUser} /> : <img src={userData?.profilePic} />}
                 </div>
                 <p className="userNameSetings">{Session?.user?.nom}</p>
                 <label className="addPicCountaner">
                     <input className="addPicInputUser" onChange={(pictureURL: any) => renderImage(pictureURL)} type="file" />
                     <div className="addPicTextUser">add Pic</div>
                 </label>
-                <div className="submitUserPicture" onClick={updateUserPrifilePic}>Submit</div>
+                <div className="submitUserPicture" onClick={uploadFile}>Submit</div>
             </div>
             <div className="userInformation">
                 <div className="UserNameCountaner">

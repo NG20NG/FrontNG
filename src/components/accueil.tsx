@@ -85,7 +85,7 @@ const Accueil = () => {
                 </div>
                 <div className="videoChamsFromYoutube">
                     <a href={`https://www.youtube.com/watch?v=TkzF5MNKPzU&t=20s`}>
-                        <iframe className="youtubeChamsVideo" src={"https://www.youtube.com/embed?v=TkzF5MNKPzU"} allowFullScreen />
+                        <iframe title="NG" className="youtubeChamsVideo" allowFullScreen />
                     </a>
                 </div>
             </div>

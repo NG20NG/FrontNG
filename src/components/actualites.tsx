@@ -13,14 +13,14 @@ const Actualites = () => {
 
     //=====================================================================================
     const [commentActu, setCommentActu] = useState<any>(null)
-    const getCommentActu = async () => {
-        const publication = await fetch(`${url}/Actualite`)
-        const pubData = await publication.json()
-        setCommentActu(pubData)
-    }
     useEffect(() => {
+        const getCommentActu = async () => {
+            const publication = await fetch(`${url}/Actualite`)
+            const pubData = await publication.json()
+            setCommentActu(pubData)
+        }
         getCommentActu()
-    }, [])
+    }, [url])
     const deleteActuBTN = async (id: any) => {
         let test = window.confirm("Etes vous sur de vouloir supprimer")
         if (test === true) {
@@ -38,6 +38,7 @@ const Actualites = () => {
             alert("Rien n'a été supprimé")
         }
     }
+
     return <div className="actualites">
         <div className="actuCountaner">
             <div className="titreActu">Actualites</div>
@@ -45,7 +46,7 @@ const Actualites = () => {
                 {commentActu?.map((actu: any, index: any) => {
                     return (<div key={index} className="cardPublication">
                         <div className="leftBarPucture">
-                            <div><img className="imagePublication" src={`${url}/uploads/` + actu?.picture} alt="publication" ></img></div>
+                            <div><img className="imagePublication" src={actu?.picture} alt="publication" ></img></div>
                         </div>
                         <div className="rightBarComment">
                             <div>

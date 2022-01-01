@@ -1,6 +1,18 @@
 .Ateliers {
   margin-top: 100px;
 }
+.titreAteliersH2 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+h2 {
+  width: fit-content;
+  font-size: 62px;
+  color: rgb(13, 13, 28);
+}
 .atelierCardsCounatner {
   height: auto;
   width: 100vw;

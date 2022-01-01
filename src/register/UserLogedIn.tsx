@@ -49,17 +49,16 @@ export const UserLogedIn = () => {
     }
     const [userData, setUserData] = useState<any>()
 
-    const getUserById = async () => {
-        const req = await fetch(`${url}/users/${Session?.user?._id}`)
-        const data = await req.json()
-        setUserData(data)
-    }
-    console.log(`url(${url}/userProfilePic/${userData?.profilePic})`);
-
     useEffect(() => {
+        const getUserById = async () => {
+            const req = await fetch(`${url}/users/${Session?.user?._id}`)
+            const data = await req.json()
+            setUserData(data)
+        }
+
         getUserById()
-    }, [])
-    gsap.to(".newUserLogo", { backgroundImage: `url(${url}/userProfilePic/${userData?.profilePic})` })
+    }, [url, Session?.user?._id])
+    gsap.to(".newUserLogo", { backgroundImage: `url(${userData?.profilePic})` })
     return <>
         <div className="userLogedIn">
             <div className="userPicCountaner">
