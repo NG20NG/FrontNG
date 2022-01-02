@@ -12,9 +12,9 @@ import music4 from "./Comp.css/PhotoAteliers/music/music4.jpg"
 import music5 from "./Comp.css/PhotoAteliers/music/music5.jpg"
 import music6 from "./Comp.css/PhotoAteliers/music/music6.jpg"
 //================================theatre
-import theatre1 from "./Comp.css/PhotoAteliers/theatre/theatre1.jpg"
-import theatre2 from "./Comp.css/PhotoAteliers/theatre/theatre2.png"
-import theatre3 from "./Comp.css/PhotoAteliers/theatre/theatre3.png"
+import theatre1 from "./Comp.css/PhotoAteliers/theatre/theatre1.webp"
+import theatre2 from "./Comp.css/PhotoAteliers/theatre/theatre2.webp"
+import theatre3 from "./Comp.css/PhotoAteliers/theatre/theatre3.webp"
 //================================mot
 import Capture1 from "./Comp.css/PhotoAteliers/motr/Capture1.jpg"
 import Capture2 from "./Comp.css/PhotoAteliers/motr/Capture2.jpg"
@@ -35,7 +35,7 @@ import dance3 from "./Comp.css/PhotoAteliers/dance/dance3.jpg"
 //==============================================================================
 const Ateliers = () => {
     let height = 432
-    let width = 650
+    let width = "auto"
     return <div className="Ateliers">
         <div className="titreAteliersH2">
             <h2>N'au atelier</h2>
