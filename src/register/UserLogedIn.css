@@ -49,9 +49,16 @@
   flex-direction: column;
   display: flex;
   align-items: flex-end;
-  position: fixed;
-  right: 90px;
-  top: 17px;
+  justify-content: flex-end;
+  margin-left: 10px;
+}
+.adminButtonsetingsButtonCounatner {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  top: 50px;
 }
 .UserOptionsButton {
   border-radius: 5px;

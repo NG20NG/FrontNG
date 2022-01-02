@@ -73,16 +73,18 @@ export const UserLogedIn = () => {
                 <img className="logoGoDown" src={userGoDown} alt="open" />
             </div>
 
-            {options === false ? <></> : <>
+            <div className="adminButtonsetingsButtonCounatner">
+                {options === false ? <></> : <>
 
-                {Session?.user?.nom === "Admin" && Session?.user?.admin === true ?
-                    <div className="adminButton"
-                        onClick={() => dashBord()}>Admin</div> : <></>}
+                    {Session?.user?.nom === "Admin" && Session?.user?.admin === true ?
+                        <div className="adminButton"
+                            onClick={() => dashBord()}>Admin</div> : <></>}
 
-                <div className="setingsButton"
-                    onClick={() => setingsOn()}>Paramètre&nbsp;<div>d'utilisateur</div></div>
-                <Link to="/"><div className="desconectButton" onClick={() => removeCookies()}>Déconnecter</div></Link>
-            </>}
+                    <div className="setingsButton"
+                        onClick={() => setingsOn()}>Paramètre&nbsp;<div>d'utilisateur</div></div>
+                    <Link to="/"><div className="desconectButton" onClick={() => removeCookies()}>Déconnecter</div></Link>
+                </>}
+            </div>
         </div>
     </>
 }
